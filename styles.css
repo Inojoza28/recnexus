@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #2563EB #1F2937;
+    background: 
+        radial-gradient(ellipse at top left, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1F2937;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2563EB;
+    border-radius: 20px;
+}
+
+/* Animações de Menu Mobile */
+.mobile-nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #2563EB;
+    transition: width 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+    color: #2563EB;
+}
+
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
+
+/* Animações Custom */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.8s ease-out;
+}
+
