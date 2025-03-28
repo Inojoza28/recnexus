@@ -7,57 +7,83 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTQgMmExIDEgMCAwIDEgMSAxdjRoLTNWM2ExIDEgMCAwIDEgMS0xaDFabS01IDBoLjAxTTYgNGguMDFNNCAyaDFhMSAxIDAgMCAxIDEgMXY0SDN2LTdibmtaIDAgMCAxIDEtMVptMTMgMTZhMyAzIDAgMCAxLTMgM2gtNGEzIDMgMCAwIDEtMy0zdi03aDE0djdoLTRabTMtMTBoLTE0djVoMTR2LTVaIi8+PC9zdmc+">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/phosphor-icons"></script>
+    <!-- Font Awesome para ícones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-[#121212] text-[#E0E0E0] font-inter antialiased selection:bg-[#4A90E2] selection:text-white">
-    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-80 bg-[#1E1E1E] z-50 transform translate-x-full transition-transform duration-500 ease-in-out rounded-l-3xl shadow-2xl">
-        <div class="flex justify-between items-center p-6">
-            <h2 class="text-2xl font-bold text-[#4A90E2]">Menu</h2>
-            <button id="close-mobile-menu" class="text-[#9E9E9E] hover:text-[#4A90E2] transition-colors">
-                <i class="ph-x text-2xl"></i>
+    <div id="mobile-menu" class="fixed inset-0 left-auto w-full max-w-[320px] bg-gradient-to-b from-[#1A1A1A] to-[#121212] z-[9999] transform translate-x-full transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] shadow-[rgba(0,0,0,0.3)_-8px_0_30px] border-l border-[#ffffff]/10 backdrop-blur-2xl">
+        <div class="flex justify-between items-center p-5 border-b border-[#ffffff]/10">
+            <div class="flex items-center space-x-2">
+                <h2 class="text-xl font-semibold bg-gradient-to-r from-[#4A90E2] to-[#6AC8F5] bg-clip-text text-transparent">MENU</h2>
+            </div>
+            <button id="close-mobile-menu" class="p-2 bg-[#ffffff]/10 rounded-lg hover:bg-[#4A90E2]/20 transition-colors">
+                <i class="ph-x text-[#4A90E2] text-xl"></i>
             </button>
         </div>
-        <nav class="flex flex-col space-y-6 px-6">
-            <a href="#home" class="mobile-nav-link text-xl flex items-center space-x-3 group">
-                <i class="ph-house group-hover:text-[#4A90E2] transition-colors"></i>
-                <span>Início</span>
+        <nav class="flex flex-col space-y-1 p-4">
+            <a href="#home" class="mobile-nav-link group flex items-center space-x-3 p-3 rounded-xl transition-all hover:bg-[#ffffff]/05 active:scale-95">
+                <div class="w-9 h-9 bg-[#4A90E2]/10 flex items-center justify-center rounded-lg group-hover:bg-gradient-to-br from-[#4A90E2]/20 to-[#6AC8F5]/20 transition-colors">
+                    <i class="ph-house text-[#4A90E2] group-hover:text-[#6AC8F5] text-lg transition-colors"></i>
+                </div>
+                <span class="text-[#CFCFCF] group-hover:text-white font-medium">Início</span>
             </a>
-            <a href="#como-funciona" class="mobile-nav-link text-xl flex items-center space-x-3 group">
-                <i class="ph-gear group-hover:text-[#4A90E2] transition-colors"></i>
-                <span>Como Funciona</span>
+            
+            <a href="#como-funciona" class="mobile-nav-link group flex items-center space-x-3 p-3 rounded-xl transition-all hover:bg-[#ffffff]/05 active:scale-95">
+                <div class="w-9 h-9 bg-[#4A90E2]/10 flex items-center justify-center rounded-lg group-hover:bg-gradient-to-br from-[#4A90E2]/20 to-[#6AC8F5]/20 transition-colors">
+                    <i class="ph-gear text-[#4A90E2] group-hover:text-[#6AC8F5] text-lg transition-colors"></i>
+                </div>
+                <span class="text-[#CFCFCF] group-hover:text-white font-medium">Como Funciona</span>
             </a>
-            <a href="#processo" class="mobile-nav-link text-xl flex items-center space-x-3 group">
-                <i class="ph-flow-arrow group-hover:text-[#4A90E2] transition-colors"></i>
-                <span>Processo</span>
+            
+            <a href="#processo" class="mobile-nav-link group flex items-center space-x-3 p-3 rounded-xl transition-all hover:bg-[#ffffff]/05 active:scale-95">
+                <div class="w-9 h-9 bg-[#4A90E2]/10 flex items-center justify-center rounded-lg group-hover:bg-gradient-to-br from-[#4A90E2]/20 to-[#6AC8F5]/20 transition-colors">
+                    <i class="ph-flow-arrow text-[#4A90E2] group-hover:text-[#6AC8F5] text-lg transition-colors"></i>
+                </div>
+                <span class="text-[#CFCFCF] group-hover:text-white font-medium">Processo</span>
             </a>
-            <a href="#contato" class="mobile-nav-link text-xl flex items-center space-x-3 group">
-                <i class="ph-envelope-simple group-hover:text-[#4A90E2] transition-colors"></i>
-                <span>Contato</span>
+            
+            <a href="#contato" class="mobile-nav-link group flex items-center space-x-3 p-3 rounded-xl transition-all hover:bg-[#ffffff]/05 active:scale-95">
+                <div class="w-9 h-9 bg-[#4A90E2]/10 flex items-center justify-center rounded-lg group-hover:bg-gradient-to-br from-[#4A90E2]/20 to-[#6AC8F5]/20 transition-colors">
+                    <i class="ph-envelope-simple text-[#4A90E2] group-hover:text-[#6AC8F5] text-lg transition-colors"></i>
+                </div>
+                <span class="text-[#CFCFCF] group-hover:text-white font-medium">Contato</span>
             </a>
         </nav>
     </div>
 
     <div class="container mx-auto px-4 py-8 max-w-6xl relative">
-        <header class="fixed top-0 left-0 right-0 bg-[#121212]/90 backdrop-blur-md z-40 transition-all duration-300">
-            <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-                <div class="flex items-center space-x-4">
-                    <div class="bg-[#4A90E2] w-10 h-10 rounded-full flex items-center justify-center">
-                        <i class="ph-lightning-fill text-xl text-white"></i>
+        <header class="fixed top-0 left-0 right-0 bg-gradient-to-b from-[#121212]/90 to-[#0a0a0a]/90 backdrop-blur-lg border-b border-[#ffffff]/10 z-50 transition-all duration-300 hover:backdrop-blur-xl">
+            <div class="max-w-7xl mx-auto px-5 py-3.5 flex justify-between items-center">
+                <div class="flex items-center space-x-3 group">
+                    <div class="bg-gradient-to-br from-[#4A90E2] to-[#6AC8F5] w-11 h-11 rounded-xl flex items-center justify-center shadow-[0_0_15px_-2px_rgba(74,144,226,0.3)] transition-transform duration-300 hover:scale-105">
+                        <i class="ph-lightning-fill text-xl text-white/90"></i>
                     </div>
-                    <h1 class="text-2xl font-bold tracking-tight">
-                        <span class="text-[#4A90E2]">R</span><span class="text-[#9E9E9E]">e</span><span class="text-[#E0E0E0]">c</span><span class="text-[#BDBDBD]">nexus</span>
+                    <h1 class="text-2xl font-bold tracking-tighter">
+                        <span class="bg-gradient-to-r from-[#4A90E2] to-[#6AC8F5] bg-clip-text text-transparent">Recnexus</span>
                     </h1>
                 </div>
                 
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#home" class="text-[#9E9E9E] hover:text-[#4A90E2] transition-colors">Início</a>
-                    <a href="#como-funciona" class="text-[#9E9E9E] hover:text-[#4A90E2] transition-colors">Como Funciona</a>
-                    <a href="#processo" class="text-[#9E9E9E] hover:text-[#4A90E2] transition-colors">Processo</a>
-                    <a href="#contato" class="text-[#9E9E9E] hover:text-[#4A90E2] transition-colors">Contato</a>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="relative text-[#CFCFCF] hover:text-[#4A90E2] transition-all group">
+                        <span>Início</span>
+                        <div class="absolute bottom-0 left-0 w-0 h-px bg-[#4A90E2] transition-all duration-300 group-hover:w-full"></div>
+                    </a>
+                    <a href="#como-funciona" class="relative text-[#CFCFCF] hover:text-[#4A90E2] transition-all group">
+                        <span>Como Funciona</span>
+                        <div class="absolute bottom-0 left-0 w-0 h-px bg-[#4A90E2] transition-all duration-300 group-hover:w-full"></div>
+                    </a>
+                    <a href="#processo" class="relative text-[#CFCFCF] hover:text-[#4A90E2] transition-all group">
+                        <span>Processo</span>
+                        <div class="absolute bottom-0 left-0 w-0 h-px bg-[#4A90E2] transition-all duration-300 group-hover:w-full"></div>
+                    </a>
+                    <a href="#contato" class="px-4 py-2 bg-gradient-to-r from-[#4A90E2] to-[#6AC8F5] text-white rounded-lg shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                        Contato
+                    </a>
                 </nav>
-
-                <button id="mobile-menu-toggle" class="md:hidden text-[#4A90E2] text-2xl">
-                    <i class="ph-list"></i>
+        
+                <button id="mobile-menu-toggle" class="md:hidden bg-[#ffffff]/10 p-2.5 rounded-lg hover:bg-[#4A90E2]/20 transition-colors">
+                    <i class="ph-list text-[#4A90E2] text-2xl"></i>
                 </button>
             </div>
         </header>
@@ -84,13 +110,96 @@
                         </a>
                     </div>
                 </div>
-                <div class="hidden md:flex justify-center relative">
-                    <div id="tech-globe" class="relative w-80 h-80">
-                        <div class="absolute inset-0 bg-gradient-to-br from-[#1E1E1E]/50 to-[#121212]/50 rounded-full blur-md animate-pulse"></div>
-                        <div class="absolute inset-0 border-4 border-[#4A90E2]/30 rounded-full animate-spin-slow"></div>
-                        <div class="absolute inset-0 border-4 border-l-[#4A90E2] border-transparent rounded-full animate-spin-reverse"></div>
+                <div class="hidden md:flex justify-center items-center min-h-[300px]">
+                    <div class="relative digital-device transform transition-transform duration-300 group">
+                      <!-- Estrutura do dispositivo com notch -->
+                      <div class="w-80 h-[550px] bg-gray-900 rounded-[40px] shadow-2xl border-8 border-gray-800 overflow-hidden relative">
+                        <!-- Efeito de partículas tech -->
+                        <div class="absolute inset-0 tech-particles opacity-30"></div>
+                        
+                        <!-- Tela do dispositivo -->
+                        <div class="h-full flex flex-col backdrop-blur-sm">
+                          <!-- Notch e status bar -->
+                          <div class="pt-4 px-6 relative z-10">
+                            <div class="h-4 flex items-center justify-between">
+                              <div class="flex items-center space-x-2">
+                                <i class="text-blue-400 text-sm fa-brands fa-instagram"></i>
+                                <span class="text-gray-100 font-medium text-sm">RECNEXUS</span>
+                              </div>
+                              <div id="current-time" class="text-gray-300 text-sm font-medium"></div>
+                            </div>
+                          </div>
+                  
+                          <!-- Conteúdo principal -->
+                          <div class="flex-1 p-6 flex flex-col justify-between relative z-10">
+                            <!-- Estatísticas principais -->
+                            <div class="space-y-8">
+                              <!-- Seguidores com animação de carga -->
+                              <div class="text-center">
+                                <div class="text-3xl font-bold text-gray-100" id="followers">0</div>
+                                <div class="text-sm text-gray-400 mt-1">Seguidores</div>
+                                <div class="h-1 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                                  <div class="h-full bg-blue-500 rounded-full transition-all duration-1000 ease-out" 
+                                       id="progress-bar" style="width: 0%"></div>
+                                </div>
+                              </div>
+                  
+                              <!-- Métricas rápidas com animação escalonada -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div class="metric-card">
+                                  <i class="fa-regular fa-eye text-blue-400"></i>
+                                  <div class="text-xl font-semibold text-gray-100 counter" data-target="2500">0</div>
+                                  <div class="text-xs text-gray-400">Visualizações</div>
+                                </div>
+                                <div class="metric-card">
+                                  <i class="fa-solid fa-heart text-blue-400"></i>
+                                  <div class="text-xl font-semibold text-gray-100 counter" data-target="1200">0</div>
+                                  <div class="text-xs text-gray-400">Curtidas</div>
+                                </div>
+                                <div class="metric-card">
+                                  <i class="fa-solid fa-share-nodes text-blue-400"></i>
+                                  <div class="text-xl font-semibold text-gray-100 counter" data-target="893">0</div>
+                                  <div class="text-xs text-gray-400">Shares</div>
+                                </div>
+                              </div>
+                            </div>
+                  
+                            <!-- Detalhes de engajamento -->
+                            <div class="space-y-4">
+                              <div class="engagement-item">
+                                <div class="flex items-center justify-between">
+                                  <div class="flex items-center space-x-3">
+                                    <i class="fa-regular fa-comment text-blue-400"></i>
+                                    <span class="text-sm text-gray-300">Comentários</span>
+                                  </div>
+                                  <span class="text-gray-100 font-medium counter" data-target="326">0</span>
+                                </div>
+                              </div>
+                  
+                              <div class="engagement-item">
+                                <div class="flex items-center justify-between">
+                                  <div class="flex items-center space-x-3">
+                                    <i class="fa-regular fa-bookmark text-blue-400"></i>
+                                    <span class="text-sm text-gray-300">Salvamentos</span>
+                                  </div>
+                                  <span class="text-gray-100 font-medium counter" data-target="512">0</span>
+                                </div>
+                              </div>
+                            </div>
+                  
+                            <!-- Status de conexão -->
+                            <div class="pt-4 border-t border-gray-800">
+                              <div class="flex items-center justify-center space-x-2">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full animate-ping"></div>
+                                <span class="text-sm text-blue-400" id="engagement-rate">Conectado - Calculando engajamento...</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
+                  
             </section>
 
             <section id="como-funciona" class="mb-20">
@@ -175,6 +284,8 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
