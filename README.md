@@ -1,7 +1,7 @@
 # RecNexus 🌐🚀
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Languages](https://img.shields.io/github/languages/top/seu-usuario/recnexus)](https://github.com/seu-usuario/recnexus)
+[![Languages](https://img.shields.io/github/languages/top/seu-usuario/recnexus)](https://github.com/inojoza28/recnexus)
 [![Instagram](https://img.shields.io/badge/Instagram-%40recnexus-E4405F?logo=instagram)](https://instagram.com/recnexus)
 
 <p align="center">
@@ -12,7 +12,7 @@
 
 Plataforma web para conexão estratégica de criadores de conteúdo tech através de reposts inteligentes no Instagram. Amplie seu alcance orgânico enquanto fortalece sua rede profissional na comunidade tecnológica.
 
-**Live Demo:** [recnexus.com](https://recnexus.com) (exemplo)
+**Live Demo:** [recnexus.com](https://recnexus.com.br)
 
 ## ✨ Funcionalidades Principais
 
@@ -34,44 +34,7 @@ Plataforma web para conexão estratégica de criadores de conteúdo tech atravé
   - Dark Mode Moderno
   - Gradientes Dinâmicos
   - UI/UX Responsivo
-- **Integrações:**
-  - Instagram API (em desenvolvimento)
-  - Google Analytics (opcional)
 
-## 🚀 Como Executar
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/recnexus.git
-```
-
-2. Instale as dependências:
-```bash
-npm install # ou yarn
-```
-
-3. Execute o servidor local:
-```bash
-npm run dev # ou yarn dev
-```
-
-## 🎨 Personalização
-
-Para modificar o tema:
-```javascript
-// tailwind.config.js
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        primary: '#4A90E2',
-        secondary: '#6AC8F5',
-        dark: '#121212'
-      }
-    }
-  }
-}
-```
 
 ## 🌟 Destaques Técnicos
 
@@ -107,7 +70,7 @@ Distribuído sob licença MIT. Veja `LICENSE` para mais detalhes.
 ## 📬 Contato
 
 **Equipe RecNexus** - [@recnexus](https://instagram.com/recnexus)  
-**GitHub:** [@seu-usuario](https://github.com/seu-usuario)  
-**Email:** contato@recnexus.com
+**GitHub:** [@inojoza28](https://github.com/inojoza28)  
+**Instagram:** [@RecNexus | Comunidade Tech](https://instagram.com/recnexus)  
 
 
