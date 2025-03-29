@@ -13,6 +13,7 @@
 Plataforma web para conexão estratégica de criadores de conteúdo tech através de reposts inteligentes no Instagram. Amplie seu alcance orgânico enquanto fortalece sua rede profissional na comunidade tecnológica.
 
 **Acesse nossa aplicação:** [recnexus.com.br](https://recnexus.com.br)
+**Acesse nosso Instagram:** [@recnexus](https://instagram.com/recnexus)
 
 ## ✨ Funcionalidades Principais
 
