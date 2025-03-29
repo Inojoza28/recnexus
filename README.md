@@ -1,7 +1,7 @@
 # RecNexus 🌐🚀
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Languages](https://img.shields.io/github/languages/top/seu-usuario/recnexus)](https://github.com/inojoza28/recnexus)
+[![Languages](https://img.shields.io/github/languages/top/inojoza28/recnexus)](https://github.com/inojoza28/recnexus)
 [![Instagram](https://img.shields.io/badge/Instagram-%40recnexus-E4405F?logo=instagram)](https://instagram.com/recnexus)
 
 <p align="center">
