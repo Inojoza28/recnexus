@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const accessibilityBtn = document.getElementById('accessibility-btn');
     const accessibilityPanel = document.getElementById('accessibility-panel');
+    const closePanelBtn = document.getElementById('close-panel');
     const synth = window.speechSynthesis;
-    
+
     // Texto fixo para leitura
     const siteDescription = `
         A RecNexus é uma comunidade tech que impulsiona criadores de conteúdo através de reposts estratégicos no Instagram. 
@@ -26,16 +27,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Controle do Painel (função reaproveitável)
+    const togglePanel = (open = true) => {
+        accessibilityPanel.classList.toggle('scale-0', !open);
+        accessibilityPanel.classList.toggle('scale-100', open);
+    };
+
+    if (accessibilityBtn && accessibilityPanel) {
+        // Abrir painel
+        accessibilityBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            togglePanel(true);
+        });
+
+        // Fechar ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (!accessibilityPanel.contains(e.target) && !accessibilityBtn.contains(e.target)) {
+                togglePanel(false);
+            }
+        });
+    }
+
+    // Fechar com botão X
+    if (closePanelBtn) {
+        closePanelBtn.addEventListener('click', () => {
+            togglePanel(false);
+        });
+    }
+
     // Sistema Aprimorado de Alto Contraste
     const highContrastToggle = document.getElementById('high-contrast');
     if (highContrastToggle) {
         // Carregar estado salvo considerando preferências do sistema
         const prefersHighContrast = window.matchMedia('(prefers-contrast: more)').matches;
         const savedHighContrast = localStorage.getItem('highContrast') === 'true';
-        
+
         highContrastToggle.checked = savedHighContrast || prefersHighContrast;
         document.body.classList.toggle('high-contrast', highContrastToggle.checked);
-        
+
         // Ouvir mudanças com debounce
         let timeout;
         highContrastToggle.addEventListener('change', () => {
@@ -43,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             timeout = setTimeout(() => {
                 document.body.classList.toggle('high-contrast', highContrastToggle.checked);
                 localStorage.setItem('highContrast', highContrastToggle.checked);
-                
+
                 // Forçar repaint para transições suaves
                 document.body.getBoundingClientRect();
             }, 100);
@@ -92,16 +121,16 @@ document.addEventListener('DOMContentLoaded', () => {
         currentUtterance.rate = 1;
         currentUtterance.pitch = 1;
         currentUtterance.volume = 1;
-        
+
         // Feedback visual durante a fala
         currentUtterance.onstart = () => {
             document.documentElement.classList.add('speech-active');
         };
-        
+
         currentUtterance.onend = () => {
             document.documentElement.classList.remove('speech-active');
         };
-        
+
         synth.speak(currentUtterance);
     });
 
@@ -109,16 +138,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('reset-settings').addEventListener('click', () => {
         // Animação de reset suave
         document.documentElement.style.transition = 'all 0.3s ease';
-        
+
         // Resetar configurações
         localStorage.clear();
         fontSize = 100;
         applyFontSize();
-        
+
         // Resetar alto contraste
         document.body.classList.remove('high-contrast');
         highContrastToggle.checked = false;
-        
+
         // Parar leitura
         if (synth.speaking) {
             synth.cancel();
@@ -129,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         feedback.textContent = 'Configurações resetadas!';
         feedback.className = 'fixed bottom-20 left-5 bg-green-500 text-white px-4 py-2 rounded-lg';
         document.body.appendChild(feedback);
-        
+
         setTimeout(() => feedback.remove(), 2000);
     });
 });

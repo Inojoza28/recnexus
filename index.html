@@ -624,50 +624,58 @@
         </button>
 
         <div id="accessibility-panel"
-            class="fixed top-[6.5rem] right-4 bg-[#1A1A1A] p-6 rounded-xl shadow-xl border border-[#363636] transform scale-0 origin-top-right transition-transform duration-300 z-[9998] w-64 mt-2">
-            <div class="space-y-4">
-                <h3 class="text-[#E0E0E0] font-semibold mb-2">Acessibilidade</h3>
-
-                <!-- Alto Contraste -->
-                <div class="flex items-center justify-between">
-                    <span class="text-[#CFCFCF] text-sm">Alto contraste</span>
-                    <label class="switch">
-                        <input type="checkbox" id="high-contrast">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-
-                <!-- Tamanho do Texto -->
-                <div class="flex items-center justify-between">
-                    <span class="text-[#CFCFCF] text-sm">Tamanho do Texto</span>
-                    <div class="flex gap-2">
-                        <button 
-                            id="decrease-font"
-                            class="w-8 h-8 flex items-center justify-center bg-gradient-to-br from-[#4A90E2]/10 to-[#6AC8F5]/10 rounded-lg border border-[#4A90E2]/20 hover:border-[#6AC8F5]/40 transition-all duration-200 hover:scale-105 group"
-                            aria-label="Diminuir tamanho do texto">
-                            <span class="text-[#4A90E2] group-hover:text-[#6AC8F5] font-bold transition-colors">A-</span>
-                        </button>
-                        
-                        <button 
-                            id="increase-font"
-                            class="w-8 h-8 flex items-center justify-center bg-gradient-to-br from-[#4A90E2]/10 to-[#6AC8F5]/10 rounded-lg border border-[#4A90E2]/20 hover:border-[#6AC8F5]/40 transition-all duration-200 hover:scale-105 group"
-                            aria-label="Aumentar tamanho do texto">
-                            <span class="text-[#4A90E2] group-hover:text-[#6AC8F5] font-bold transition-colors">A+</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Leitura do Texto -->
-                <button id="text-to-speech"
-                    class="w-full bg-[#4A90E2]/10 text-[#4A90E2] py-2 rounded-lg hover:bg-[#4A90E2]/20 transition-colors text-sm">
-                    <i class="ph-speaker-high mr-2"></i>Ouvir sobre o site
+        class="fixed top-[6.5rem] right-4 bg-[#1A1A1A] p-6 rounded-xl shadow-xl border border-[#363636] transform scale-0 origin-top-right transition-transform duration-300 z-[9998] w-64 mt-2">
+        <div class="space-y-4">
+            <!-- Cabeçalho com botão de fechar -->
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-[#E0E0E0] font-semibold">Acessibilidade</h3>
+                <button id="close-panel" 
+                        class="p-1 rounded-full transition-colors"
+                        aria-label="Fechar painel">
+                    <i class="ph-x text-[#CFCFCF] text-lg"></i>
                 </button>
             </div>
-            <button id="reset-settings"
-                class="w-full bg-[#4A90E2]/10 text-[#4A90E2] py-2 rounded-lg hover:bg-[#4A90E2]/20 transition-colors text-sm mt-4">
-                <i class="ph-arrow-counter-clockwise mr-2"></i>Resetar tudo
+    
+            <!-- Alto Contraste -->
+            <div class="flex items-center justify-between">
+                <span class="text-[#CFCFCF] text-sm">Alto contraste</span>
+                <label class="switch">
+                    <input type="checkbox" id="high-contrast">
+                    <span class="slider"></span>
+                </label>
+            </div>
+    
+            <!-- Tamanho do Texto -->
+            <div class="flex items-center justify-between">
+                <span class="text-[#CFCFCF] text-sm">Tamanho do Texto</span>
+                <div class="flex gap-2">
+                    <button 
+                        id="decrease-font"
+                        class="w-8 h-8 flex items-center justify-center bg-gradient-to-br from-[#4A90E2]/10 to-[#6AC8F5]/10 rounded-lg border border-[#4A90E2]/20 hover:border-[#6AC8F5]/40 transition-all duration-200 hover:scale-105 group"
+                        aria-label="Diminuir tamanho do texto">
+                        <span class="text-[#4A90E2] group-hover:text-[#6AC8F5] font-bold transition-colors">A-</span>
+                    </button>
+                    
+                    <button 
+                        id="increase-font"
+                        class="w-8 h-8 flex items-center justify-center bg-gradient-to-br from-[#4A90E2]/10 to-[#6AC8F5]/10 rounded-lg border border-[#4A90E2]/20 hover:border-[#6AC8F5]/40 transition-all duration-200 hover:scale-105 group"
+                        aria-label="Aumentar tamanho do texto">
+                        <span class="text-[#4A90E2] group-hover:text-[#6AC8F5] font-bold transition-colors">A+</span>
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Leitura do Texto -->
+            <button id="text-to-speech"
+                class="w-full bg-[#4A90E2]/10 text-[#4A90E2] py-2 rounded-lg hover:bg-[#4A90E2]/20 transition-colors text-sm">
+                <i class="ph-speaker-high mr-2"></i>Ouvir sobre o site
             </button>
         </div>
+        <button id="reset-settings"
+            class="w-full bg-[#4A90E2]/10 text-[#4A90E2] py-2 rounded-lg hover:bg-[#4A90E2]/20 transition-colors text-sm mt-4">
+            <i class="ph-arrow-counter-clockwise mr-2"></i>Resetar tudo
+        </button>
+    </div>
 
         <script src="js/acessibilidade.js"></script>
         <script src="js/scroll-top.js"></script>

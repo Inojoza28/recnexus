@@ -197,3 +197,9 @@ input:checked + .slider:before {
     color: #000000 !important;
     font-weight: 600 !important;
 }
+
+.high-contrast #close-panel {
+    background: none !important;
+    border: none !important;
+}
+
