@@ -190,5 +190,10 @@ input:checked + .slider:before {
 
 .high-contrast #mobile-menu-toggle i{
     color: #000000 !important;
-    font-weight: 600;
+    font-weight: 600 !important;
+}
+
+.high-contrast #close-mobile-menu i{
+    color: #000000 !important;
+    font-weight: 600 !important;
 }
