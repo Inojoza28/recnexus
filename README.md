@@ -26,7 +26,7 @@ Plataforma web para conexão estratégica de criadores de conteúdo tech atravé
 
 ## 🛠 Tecnologias Utilizadas
 
-[![Tech Stack](https://skillicons.dev/icons?i=html,tailwind,js,github,instagram)](https://skillicons.dev)
+[![Tech Stack](https://skillicons.dev/icons?i=html,css,tailwind,js,github,instagram)](https://skillicons.dev)
 
 - **Frontend:** 
   - Tailwind CSS + Inter Font
