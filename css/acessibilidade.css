@@ -180,3 +180,15 @@ input:checked + .slider:before {
 .high-contrast input:checked + .slider {
     background: #FFFF00 !important;
 }
+
+.high-contrast #decrease-font {
+    color: #000000 !important;
+}
+.high-contrast #increase-font{
+    color: #000000 !important;
+}
+
+.high-contrast #mobile-menu-toggle i{
+    color: #000000 !important;
+    font-weight: 600;
+}
