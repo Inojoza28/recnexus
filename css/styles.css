@@ -141,7 +141,8 @@ body {
 @media (min-width: 768px) {
     .md\:leading-loose { line-height: 1.75; }
 }
-  
+
+
 /* ANIMAÇÃO DE INICIO  */
 
 @keyframes float {

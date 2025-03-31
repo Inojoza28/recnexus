@@ -11,7 +11,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/phosphor-icons"></script>
     <!-- Font Awesome para ícones -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/scroll-top.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-[#121212] text-[#E0E0E0] font-inter antialiased selection:bg-[#4A90E2] selection:text-white">
@@ -90,8 +91,6 @@
                                       stroke-linecap="square"
                                       class="group-hover:stroke-[1.2]"/>
                             </g>
-                            
-                            <!-- Efeito de Rotação Dinâmica -->
                     
                         </svg>
                     </div>
@@ -250,66 +249,75 @@
                   </div>
                   
             </section>
-            <section class="mb-16 md:mb-20 px-4 sm:px-6">
-                <div class="max-w-4xl mx-auto text-center">
-                    <div class="bg-[#1E1E1E] p-6 sm:p-8 rounded-2xl border border-[#4A90E2]/20 hover:border-[#4A90E2]/40 transition-colors duration-300 group">
-                        <div class="mb-4 md:mb-6 flex justify-center">
-                            <div class="bg-gradient-to-br from-[#4A90E2] to-[#6AC8F5] w-12 h-12 md:w-14 md:h-14 rounded-lg md:rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                                <i class="ph-share-network text-xl md:text-2xl text-white"></i>
+            <section class="mb-16 md:mb-20 px-4">
+                <div class="max-w-3xl mx-auto"> <!-- Alterado de max-w-2xl para max-w-3xl -->
+                    <div class=" p-6 sm:p-8 rounded-xl border border-[#4A90E2]/30 hover:border-[#4A90E2]/30 transition-all duration-300 group">
+                        <div class="flex flex-col items-center space-y-4">
+                            <!-- Ícone compacto -->
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center 
+                                      bg-[#4A90E2]/10 border border-[#4A90E2]/20 mb-3
+                                      transition-all group-hover:bg-[#4A90E2]/20">
+                                <i class="ph-share-network text-xl text-[#4A90E2]"></i>
                             </div>
+            
+                            <!-- Título conciso -->
+                            <h2 class="text-2xl md:text-3xl text-center font-medium text-[#F0F0F0] leading-snug">
+                                Criadores <span class="text-[#6AC8F5]">Tech</span> ↔ 
+                                <span class="text-[#4A90E2]">Oportunidades</span>
+                            </h2>
+            
+                            <!-- Texto compacto -->
+                            <p class="text-base text-[#B0B0B0] text-center max-w-lg mx-auto leading-relaxed"> <!-- Alterado de max-w-md para max-w-lg -->
+                                Rede estratégica para ampliar conteúdo tech através de reposts qualificados,
+                                gerando visibilidade relevante e conexões profissionais.
+                            </p>
+            
+                            <!-- Divisor dinâmico -->
+                            <div class="w-16 h-px bg-[#4A90E2]/20 group-hover:w-24 group-hover:bg-[#4A90E2]/40 transition-all mt-4"></div>
                         </div>
-                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 px-2 leading-tight">
-                            Conectamos 
-                            <span class="text-[#4A90E2]">Criadores Tech</span><br class="hidden sm:inline"> a 
-                            <span class="bg-gradient-to-r from-[#4A90E2] to-[#6AC8F5] bg-clip-text text-transparent">Oportunidades</span>
-                        </h2>
-                        <p class="text-base md:text-lg text-[#9E9E9E] max-w-2xl md:max-w-3xl mx-auto leading-relaxed md:leading-loose">
-                            Plataforma colaborativa que amplifica conteúdo tecnológico através de reposts estratégicos, 
-                            aumentando visibilidade e criando conexões profissionais relevantes.
-                        </p>
                     </div>
                 </div>
             </section>
             <section id="como-funciona" class="mb-16 md:mb-20 px-4 sm:px-6">
-                <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center text-[#4A90E2]">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-[#CFCFCF] text-center transition-colors duration-300">
                     Como Funciona
                 </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto">
                     <!-- Card 1 -->
-                    <div class="bg-[#1E1E1E] p-6 md:p-8 rounded-xl md:rounded-2xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all duration-300 group">
-                        <div class="bg-[#545454]/20 w-14 h-14 md:w-16 md:h-16 rounded-full mb-4 md:mb-6 flex items-center justify-center mx-auto">
-                            <i class="ph-pencil-simple-line text-xl md:text-2xl text-[#4A90E2]"></i>
+                    <div class="bg-[#1A1A1A]/90 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-[#363636] hover:border-[#4A90E2]/60 transition-all duration-300 group hover:shadow-[0_8px_30px_rgba(74,144,226,0.12)] hover:-translate-y-1.5">
+                        <div class="bg-[#4A90E2]/10 w-14 h-14 md:w-16 md:h-16 rounded-2xl mb-4 md:mb-6 flex items-center justify-center mx-auto transition-all duration-300 group-hover:bg-[#4A90E2]/20 group-hover:scale-105">
+                            <i class="ph-pencil-simple-line text-xl md:text-2xl text-[#4A90E2] group-hover:text-[#6AAEFF]"></i>
                         </div>
-                        <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-4 text-[#4A90E2] text-center">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-4 text-[#4A90E2] text-center group-hover:text-[#6AAEFF] transition-colors">
                             Crie Conteúdo
                         </h3>
-                        <p class="text-sm md:text-base text-[#9E9E9E] text-center leading-relaxed md:leading-loose">
+                        <p class="text-sm md:text-base text-[#CFCFCF] text-center leading-relaxed md:leading-loose opacity-90">
                             Produza conteúdo tech original e relevante para nossa comunidade.
                         </p>
                     </div>
             
                     <!-- Card 2 -->
-                    <div class="bg-[#1E1E1E] p-6 md:p-8 rounded-xl md:rounded-2xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all duration-300 group">
-                        <div class="bg-[#4A90E2]/20 w-14 h-14 md:w-16 md:h-16 rounded-full mb-4 md:mb-6 flex items-center justify-center mx-auto">
-                            <i class="ph-tag-simple text-xl md:text-2xl text-[#4A90E2]"></i>
+                    <div class="bg-[#1A1A1A]/90 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-[#363636] hover:border-[#4A90E2]/60 transition-all duration-300 group hover:shadow-[0_8px_30px_rgba(74,144,226,0.12)] hover:-translate-y-1.5">
+                        <div class="bg-[#4A90E2]/10 w-14 h-14 md:w-16 md:h-16 rounded-2xl mb-4 md:mb-6 flex items-center justify-center mx-auto transition-all duration-300 group-hover:bg-[#4A90E2]/20 group-hover:scale-105">
+                            <i class="ph-tag-simple text-xl md:text-2xl text-[#4A90E2] group-hover:text-[#6AAEFF]"></i>
                         </div>
-                        <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-4 text-[#4A90E2] text-center">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-4 text-[#4A90E2] text-center group-hover:text-[#6AAEFF] transition-colors">
                             Marque a Recnexus
                         </h3>
-                        <p class="text-sm md:text-base text-[#9E9E9E] text-center leading-relaxed md:leading-loose">
+                        <p class="text-sm md:text-base text-[#CFCFCF] text-center leading-relaxed md:leading-loose opacity-90">
                             Use @recnexus no Instagram para aumentar sua visibilidade.
                         </p>
                     </div>
             
                     <!-- Card 3 -->
-                    <div class="bg-[#1E1E1E] p-6 md:p-8 rounded-xl md:rounded-2xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all duration-300 group">
-                        <div class="bg-[#545454]/20 w-14 h-14 md:w-16 md:h-16 rounded-full mb-4 md:mb-6 flex items-center justify-center mx-auto">
-                            <i class="ph-rocket-launch text-xl md:text-2xl text-[#4A90E2]"></i>
+                    <div class="bg-[#1A1A1A]/90 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-[#363636] hover:border-[#4A90E2]/60 transition-all duration-300 group hover:shadow-[0_8px_30px_rgba(74,144,226,0.12)] hover:-translate-y-1.5">
+                        <div class="bg-[#4A90E2]/10 w-14 h-14 md:w-16 md:h-16 rounded-2xl mb-4 md:mb-6 flex items-center justify-center mx-auto transition-all duration-300 group-hover:bg-[#4A90E2]/20 group-hover:scale-105">
+                            <i class="ph-rocket-launch text-xl md:text-2xl text-[#4A90E2] group-hover:text-[#6AAEFF]"></i>
                         </div>
-                        <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-4 text-[#4A90E2] text-center">
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-4 text-[#4A90E2] text-center group-hover:text-[#6AAEFF] transition-colors">
                             Amplie seu Alcance
                         </h3>
-                        <p class="text-sm md:text-base text-[#9E9E9E] text-center leading-relaxed md:leading-loose">
+                        <p class="text-sm md:text-base text-[#CFCFCF] text-center leading-relaxed md:leading-loose opacity-90">
                             Nosso selo de qualidade ajuda a expandir seu conteúdo para milhares.
                         </p>
                     </div>
@@ -317,107 +325,107 @@
             </section>
             <!-- Seção Simplificada: O que é Conteúdo Tech? -->
             <section id="conteudo-tech" class="mb-16 md:mb-20 px-4 sm:px-6">
-                <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center text-[#4A90E2]">
-                    O Que é <span class="bg-gradient-to-r from-[#4A90E2] to-[#6AC8F5] bg-clip-text text-transparent">Conteúdo Tech</span>?
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center transition-colors duration-300">
+                    O Que é <span class="bg-gradient-to-r from-[#4A90E2] to-[#6AC8F5] bg-clip-text text-transparent hover:from-[#6AAEFF] hover:to-[#8CD0FF] transition-all">Conteúdo Tech</span>?
                 </h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto">
                     
                     <!-- Card 1 - Definição Clara -->
-                    <div class="bg-[#1E1E1E] p-6 rounded-xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all duration-300">
+                    <div class="bg-[#1A1A1A]/90 p-6 rounded-2xl border border-[#363636] hover:border-[#4A90E2]/60 transition-all duration-300 group hover:shadow-[0_8px_30px_rgba(74,144,226,0.12)] hover:-translate-y-1.5">
                         <div class="mb-4 flex justify-center">
-                            <div class="bg-gradient-to-br from-[#4A90E2] to-[#6AC8F5] w-14 h-14 rounded-xl flex items-center justify-center">
-                                <i class="ph-cpu text-2xl text-white"></i>
+                            <div class="bg-gradient-to-br from-[#4A90E2] to-[#6AC8F5] w-14 h-14 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                                <i class="ph-cpu text-2xl text-white group-hover:text-[#B8E1FF]"></i>
                             </div>
                         </div>
-                        <h3 class="text-lg font-semibold mb-3 text-center text-[#E0E0E0]">
+                        <h3 class="text-lg font-semibold mb-3 text-center text-[#E0E0E0] group-hover:text-[#B8E1FF] transition-colors">
                             Tudo Sobre Tecnologia
                         </h3>
-                        <p class="text-sm text-[#9E9E9E] text-center mb-4">
+                        <p class="text-sm text-[#CFCFCF] text-center mb-4 opacity-90 leading-relaxed">
                             Conteúdos que envolvem inovação, ferramentas digitais e o mundo tech em geral
                         </p>
                         <div class="flex flex-wrap justify-center gap-2">
-                            <span class="px-3 py-1 bg-[#4A90E2]/10 text-[#4A90E2] rounded-full text-xs">Programação</span>
-                            <span class="px-3 py-1 bg-[#4A90E2]/10 text-[#4A90E2] rounded-full text-xs">Memes Tech</span>
-                            <span class="px-3 py-1 bg-[#4A90E2]/10 text-[#4A90E2] rounded-full text-xs">Futurismo</span>
-                            <span class="px-3 py-1 bg-[#4A90E2]/10 text-[#4A90E2] rounded-full text-xs">Networking</span>
+                            <span class="px-3 py-1 bg-[#4A90E2]/10 text-[#4A90E2] rounded-full text-xs hover:bg-[#4A90E2]/20 hover:scale-105 transition-all cursor-default">Programação</span>
+                            <span class="px-3 py-1 bg-[#4A90E2]/10 text-[#4A90E2] rounded-full text-xs hover:bg-[#4A90E2]/20 hover:scale-105 transition-all cursor-default">Memes Tech</span>
+                            <span class="px-3 py-1 bg-[#4A90E2]/10 text-[#4A90E2] rounded-full text-xs hover:bg-[#4A90E2]/20 hover:scale-105 transition-all cursor-default">Futurismo</span>
+                            <span class="px-3 py-1 bg-[#4A90E2]/10 text-[#4A90E2] rounded-full text-xs hover:bg-[#4A90E2]/20 hover:scale-105 transition-all cursor-default">Networking</span>
                         </div>
                     </div>
-
+            
                     <!-- Card 2 - Temas Principais -->
-                    <div class="bg-[#1E1E1E] p-6 rounded-xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all duration-300">
+                    <div class="bg-[#1A1A1A]/90 p-6 rounded-2xl border border-[#363636] hover:border-[#4A90E2]/60 transition-all duration-300 group hover:shadow-[0_8px_30px_rgba(74,144,226,0.12)] hover:-translate-y-1.5">
                         <div class="mb-4 flex justify-center">
-                            <div class="bg-gradient-to-br from-[#4A90E2] to-[#6AC8F5] w-14 h-14 rounded-xl flex items-center justify-center">
-                                <i class="ph-stack text-2xl text-white"></i>
+                            <div class="bg-gradient-to-br from-[#4A90E2] to-[#6AC8F5] w-14 h-14 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                                <i class="ph-stack text-2xl text-white group-hover:text-[#B8E1FF]"></i>
                             </div>
                         </div>
-                        <h3 class="text-lg font-semibold mb-4 text-center text-[#E0E0E0]">
+                        <h3 class="text-lg font-semibold mb-4 text-center text-[#E0E0E0] group-hover:text-[#B8E1FF] transition-colors">
                             Principais Temas
                         </h3>
-                        <ul class="space-y-3 text-sm text-[#9E9E9E]">
-                            <li class="flex items-center gap-2">
-                                <i class="ph-handshake text-[#4A90E2]"></i>
+                        <ul class="space-y-3 text-sm text-[#CFCFCF]">
+                            <li class="flex items-center gap-2 hover:text-[#E0E0E0] transition-colors">
+                                <i class="ph-handshake text-[#4A90E2] group-hover:text-[#6AAEFF] transition-colors"></i>
                                 Networking Profissional
                             </li>
-                            <li class="flex items-center gap-2">
-                                <i class="ph-code text-[#4A90E2]"></i>
+                            <li class="flex items-center gap-2 hover:text-[#E0E0E0] transition-colors">
+                                <i class="ph-code text-[#4A90E2] group-hover:text-[#6AAEFF] transition-colors"></i>
                                 Tutoriais Práticos
                             </li>
-                            <li class="flex items-center gap-2">
-                                <i class="ph-rocket-launch text-[#4A90E2]"></i>
+                            <li class="flex items-center gap-2 hover:text-[#E0E0E0] transition-colors">
+                                <i class="ph-rocket-launch text-[#4A90E2] group-hover:text-[#6AAEFF] transition-colors"></i>
                                 Dicas de Carreira
                             </li>
-                            <li class="flex items-center gap-2">
-                                <i class="ph-smiley-wink text-[#4A90E2]"></i>
+                            <li class="flex items-center gap-2 hover:text-[#E0E0E0] transition-colors">
+                                <i class="ph-smiley-wink text-[#4A90E2] group-hover:text-[#6AAEFF] transition-colors"></i>
                                 Cultura Digital
                             </li>
                         </ul>
                     </div>
-
+            
                     <!-- Card 3 - Formatos -->
-                    <div class="bg-[#1E1E1E] p-6 rounded-xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all duration-300">
+                    <div class="bg-[#1A1A1A]/90 p-6 rounded-2xl border border-[#363636] hover:border-[#4A90E2]/60 transition-all duration-300 group hover:shadow-[0_8px_30px_rgba(74,144,226,0.12)] hover:-translate-y-1.5">
                         <div class="mb-4 flex justify-center">
-                            <div class="bg-gradient-to-br from-[#4A90E2] to-[#6AC8F5] w-14 h-14 rounded-xl flex items-center justify-center">
-                                <i class="ph-play-circle text-2xl text-white"></i>
+                            <div class="bg-gradient-to-br from-[#4A90E2] to-[#6AC8F5] w-14 h-14 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                                <i class="ph-play-circle text-2xl text-white group-hover:text-[#B8E1FF]"></i>
                             </div>
                         </div>
-                        <h3 class="text-lg font-semibold mb-4 text-center text-[#E0E0E0]">
+                        <h3 class="text-lg font-semibold mb-4 text-center text-[#E0E0E0] group-hover:text-[#B8E1FF] transition-colors">
                             Formatos Aceitos
                         </h3>
-                        <ul class="space-y-3 text-sm text-[#9E9E9E]">
-                            <li class="flex items-center gap-2">
-                                <i class="ph-file-text text-[#4A90E2]"></i>
+                        <ul class="space-y-3 text-sm text-[#CFCFCF]">
+                            <li class="flex items-center gap-2 hover:text-[#E0E0E0] transition-colors">
+                                <i class="ph-file-text text-[#4A90E2] group-hover:text-[#6AAEFF] transition-colors"></i>
                                 Posts Educativos
                             </li>
-                            <li class="flex items-center gap-2">
-                                <i class="ph-megaphone text-[#4A90E2]"></i>
+                            <li class="flex items-center gap-2 hover:text-[#E0E0E0] transition-colors">
+                                <i class="ph-megaphone text-[#4A90E2] group-hover:text-[#6AAEFF] transition-colors"></i>
                                 Memes Tech
                             </li>
-                            <li class="flex items-center gap-2">
-                                <i class="ph-video-camera text-[#4A90E2]"></i>
+                            <li class="flex items-center gap-2 hover:text-[#E0E0E0] transition-colors">
+                                <i class="ph-video-camera text-[#4A90E2] group-hover:text-[#6AAEFF] transition-colors"></i>
                                 Vídeos/Reels
                             </li>
-                            <li class="flex items-center gap-2">
-                                <i class="ph-binoculars text-[#4A90E2]"></i>
+                            <li class="flex items-center gap-2 hover:text-[#E0E0E0] transition-colors">
+                                <i class="ph-binoculars text-[#4A90E2] group-hover:text-[#6AAEFF] transition-colors"></i>
                                 Análises Futuristas
                             </li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="mt-8 max-w-3xl mx-auto text-center">
-                    <p class="text-sm md:text-base text-[#9E9E9E] italic">
+            
+                <div class="mt-10 max-w-3xl mx-auto text-center border-l-4 border-[#4A90E2]/30 pl-4 hover:border-[#4A90E2]/60 transition-colors">
+                    <p class="text-sm md:text-base text-[#CFCFCF] italic bg-gradient-to-r from-[#4A90E2]/05 to-transparent py-2">
                         "Do tutorial mais útil ao meme mais engraçado - se é sobre tecnologia, queremos ver! 💻✨"
                     </p>
                 </div>
             </section>
             <section id="processo" class="mb-16 md:mb-20 px-4 sm:px-6">
-                <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center text-[#4A90E2]">
+                <h2 class="text-2xl md:text-3xl text-[#CFCFCF] font-bold mb-8 md:mb-12 text-center">
                     Processo Detalhado
                 </h2>
                 <div class="space-y-4 md:space-y-6 max-w-3xl mx-auto">
                     <!-- Passo 1 -->
-                    <div class="bg-[#1E1E1E] p-4 md:p-6 rounded-xl md:rounded-2xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all group">
+                    <div class="bg-[#1A1A1A] p-4 md:p-6 rounded-xl md:rounded-2xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all group">
                         <div class="flex items-start gap-4 md:gap-6">
                             <div class="bg-[#4A90E2] text-white w-8 h-8 md:w-12 md:h-12 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-base md:text-xl mt-1">
                                 1
@@ -434,7 +442,7 @@
                     </div>
             
                     <!-- Passo 2 -->
-                    <div class="bg-[#1E1E1E] p-4 md:p-6 rounded-xl md:rounded-2xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all group">
+                    <div class="bg-[#171717] p-4 md:p-6 rounded-xl md:rounded-2xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all group">
                         <div class="flex items-start gap-4 md:gap-6">
                             <div class="bg-[#4A90E2] text-white w-8 h-8 md:w-12 md:h-12 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-base md:text-xl mt-1">
                                 2
@@ -451,7 +459,7 @@
                     </div>
             
                     <!-- Passo 3 -->
-                    <div class="bg-[#1E1E1E] p-4 md:p-6 rounded-xl md:rounded-2xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all group">
+                    <div class="bg-[#1A1A1A] p-4 md:p-6 rounded-xl md:rounded-2xl border border-[#2C2C2C] hover:border-[#4A90E2] transition-all group">
                         <div class="flex items-start gap-4 md:gap-6">
                             <div class="bg-[#4A90E2] text-white w-8 h-8 md:w-12 md:h-12 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-base md:text-xl mt-1">
                                 3
@@ -468,10 +476,11 @@
                     </div>
                 </div>
             </section>
-            <section id="contato" class="bg-[#1E1E1E] p-6 md:p-12 rounded-2xl text-center border border-[#4A90E2]/20 hover:border-[#4A90E2]/40 transition-colors duration-300 group mx-4 sm:mx-6 lg:mx-auto max-w-6xl">
+            <section id="contato" class="bg-[#1A1A1A] p-6 md:p-12 rounded-2xl text-center border border-[#4A90E2]/20 hover:border-[#4A90E2]/40 transition-colors duration-300 group mx-4 sm:mx-6 lg:mx-auto max-w-6xl">
                 <div class="max-w-3xl mx-auto">
-                    <h2 class="text-2xl sm:text-[28px] md:text-3xl font-bold mb-3 md:mb-6 bg-gradient-to-r from-[#4A90E2] to-[#6AC8F5] bg-clip-text text-transparent px-2">
-                        Amplifique sua Presença Tech
+                    <h2 class="text-2xl sm:text-[28px] md:text-3xl font-bold mb-3 md:mb-6 px-2">
+                        <span class="text-[#CFCFCF]">Amplifique sua </span>
+                        <span class="bg-gradient-to-r from-[#4A90E2] to-[#6AC8F5] bg-clip-text text-transparent">Presença Tech</span>
                     </h2>
                     
                     <p class="text-sm md:text-base text-[#9E9E9E] mb-6 md:mb-8 max-w-xl mx-auto leading-relaxed">
@@ -510,6 +519,11 @@
             </div>
         </footer>
         
+        <button class="scroll-top dark-mode" aria-label="Voltar ao topo" onclick="scrollToTop()" style="display: block;">
+            <i class="ph-arrow-up"></i>
+        </button>
+
+    <script src="js/scroll-top.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/date.js"></script>
     <script src="js/script.js"></script>
