@@ -1,0 +1,182 @@
+/* Acessibilidade */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #363636;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4A90E2;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Alto Contraste Profissional - WCAG AAA */
+.high-contrast {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+/* Tipografia */
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h4,
+.high-contrast h5,
+.high-contrast h6,
+.high-contrast p,
+.high-contrast span,
+.high-contrast li {
+    color: #FFFFFF !important;
+    text-shadow: none !important;
+}
+
+/* Links e Interações */
+.high-contrast a {
+    color: #00FFFF !important;
+    border-bottom: 2px solid #00FFFF !important;
+}
+
+.high-contrast a:hover {
+    color: #FFFF00 !important;
+    border-color: #FFFF00 !important;
+}
+
+/* Botões e Elementos Interativos */
+.high-contrast button,
+.high-contrast .button,
+.high-contrast [type="button"],
+.high-contrast [type="submit"] {
+    background: #FFFF00 !important;
+    color: #000000 !important;
+    border: 3px solid #000000 !important;
+    padding: 0.5rem 1rem !important;
+}
+
+.high-contrast #accessibility-btn {
+    background: #000000 !important;
+    border: 2px solid #FFFF00 !important;
+}
+
+/* Formulários */
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+    padding: 0.5rem !important;
+}
+
+.high-contrast input::placeholder {
+    color: #888888 !important;
+}
+
+/* Cards e Containers */
+.high-contrast .bg-\[\#1A1A1A\]\/90,
+.high-contrast .bg-\[\#1A1A1A\] {
+    background: #000000 !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+.high-contrast .border-\[\#363636\] {
+    border-color: #FFFFFF !important;
+}
+
+/* Menu Mobile */
+.high-contrast #mobile-menu {
+    background: #000000 !important;
+    border-left: 3px solid #FFFF00 !important;
+}
+
+.high-contrast .mobile-nav-link {
+    border-bottom: 1px solid #FFFFFF !important;
+}
+
+/* Elementos Específicos */
+.high-contrast .bg-gradient-to-br {
+    background: #000000 !important;
+    border: 2px solid #FFFF00 !important;
+}
+
+.high-contrast .shadow-\[\0_0_15px_-2px_rgba\(74\,144\,226\,0\.3\)\] {
+    box-shadow: 0 0 15px -2px #FFFF00 !important;
+}
+
+/* Footer */
+.high-contrast footer {
+    border-color: #FFFFFF !important;
+}
+
+/* Focus States */
+.high-contrast *:focus {
+    outline: 3px solid #FFFF00 !important;
+    outline-offset: 2px;
+}
+
+/* Transições Controladas */
+@media (prefers-reduced-motion: no-preference) {
+    .high-contrast * {
+        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    }
+}
+
+/* Override de Cores Específicas */
+.high-contrast .text-\[\#4A90E2\] {
+    color: #FFFF00 !important;
+}
+
+.high-contrast .bg-\[\#4A90E2\]\/10 {
+    background: rgba(255, 255, 0, 0.1) !important;
+}
+
+.high-contrast .hover\:bg-\[\#4A90E2\]\/20:hover {
+    background: rgba(255, 255, 0, 0.2) !important;
+}
+
+/* Painel de Acessibilidade */
+.high-contrast #accessibility-panel {
+    border: 2px solid #FFFF00 !important;
+    background: #000000 !important;
+}
+
+.high-contrast .slider {
+    border-color: #FFFFFF !important;
+}
+
+.high-contrast input:checked + .slider {
+    background: #FFFF00 !important;
+}
