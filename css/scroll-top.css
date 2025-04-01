@@ -14,18 +14,17 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-    
-    /* Centraliza o ícone */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+
 }
 
 .scroll-top i {
     color: #4A90E2;
     font-size: 20px;
     transition: transform 0.3s ease;
+    /* Centraliza o ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .scroll-top:hover i {
