@@ -2,14 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const accessibilityBtn = document.getElementById('accessibility-btn');
     const accessibilityPanel = document.getElementById('accessibility-panel');
     const closePanelBtn = document.getElementById('close-panel');
-    const synth = window.speechSynthesis;
-
-    // Texto fixo para leitura
-    const siteDescription = `
-        A RecNexus é uma comunidade tech que impulsiona criadores de conteúdo através de reposts estratégicos no Instagram. 
-        Nosso objetivo é aumentar seu alcance e conexões profissionais na área de tecnologia. 
-        Para começar, siga nosso Instagram @recnexus e faça parte dessa rede!
-    `;
 
     // Controle do Painel (mantido)
     if (accessibilityBtn && accessibilityPanel) {
@@ -108,30 +100,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Text-to-Speech Profissional
-    let currentUtterance = null;
-    document.getElementById('text-to-speech').addEventListener('click', () => {
-        if (synth.speaking && currentUtterance) {
-            synth.cancel();
-            return;
+    // Sistema de Áudio Pré-Gravado
+    const audioButton = document.getElementById('text-to-speech');
+    const originalButtonText = audioButton.innerHTML;
+    const audio = new Audio('audio/apresentacao.mp3'); // Atualize com seu caminho
+
+    // Estados do player
+    let isPlaying = false;
+    let wasPaused = false;
+
+    // Atualizar texto do botão
+    const updateButtonState = () => {
+        if (isPlaying) {
+            audioButton.innerHTML = '<i class="ph-speaker-high mr-2"></i>Pausar áudio';
+        } else {
+            audioButton.innerHTML = originalButtonText;
         }
+    };
 
-        currentUtterance = new SpeechSynthesisUtterance(siteDescription);
-        currentUtterance.lang = 'pt-BR';
-        currentUtterance.rate = 1;
-        currentUtterance.pitch = 1;
-        currentUtterance.volume = 1;
+    // Controles de áudio
+    audioButton.addEventListener('click', () => {
+        if (isPlaying) {
+            audio.pause();
+            isPlaying = false;
+            wasPaused = true;
+        } else {
+            if (wasPaused) {
+                audio.play();
+            } else {
+                audio.currentTime = 0;
+                audio.play();
+            }
+            isPlaying = true;
+            wasPaused = false;
+        }
+        updateButtonState();
+    });
 
-        // Feedback visual durante a fala
-        currentUtterance.onstart = () => {
-            document.documentElement.classList.add('speech-active');
-        };
-
-        currentUtterance.onend = () => {
-            document.documentElement.classList.remove('speech-active');
-        };
-
-        synth.speak(currentUtterance);
+    // Resetar ao terminar
+    audio.addEventListener('ended', () => {
+        isPlaying = false;
+        wasPaused = false;
+        updateButtonState();
     });
 
     // Reset de Configurações Profissional
@@ -149,8 +159,9 @@ document.addEventListener('DOMContentLoaded', () => {
         highContrastToggle.checked = false;
 
         // Parar leitura
-        if (synth.speaking) {
-            synth.cancel();
+        if (audio && !audio.paused) {
+            audio.pause();
+            audio.currentTime = 0;
         }
 
         // Feedback visual

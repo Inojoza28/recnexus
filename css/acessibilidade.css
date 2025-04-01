@@ -203,3 +203,8 @@ input:checked + .slider:before {
     border: none !important;
 }
 
+.high-contrast .scroll-top{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
