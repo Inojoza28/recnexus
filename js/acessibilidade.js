@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Atualizar texto do botão
     const updateButtonState = () => {
         if (isPlaying) {
-            audioButton.innerHTML = '<i class="ph-speaker-high mr-2"></i>Pausar áudio';
+            audioButton.innerHTML = '<i class="fa-solid fa-volume-high mr-2"></i>Pausar áudio';
         } else {
             audioButton.innerHTML = originalButtonText;
         }
